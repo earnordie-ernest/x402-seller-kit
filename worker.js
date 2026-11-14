@@ -216,27 +216,30 @@ export default {
       });
     }
     if (path === "/openapi.json") {
-      const op = (id, summary, params) => ({
+      const op = (id, summary, body) => ({
         operationId: id,
         summary,
-        parameters: params || [],
-        "x-payment-info": { protocols: ["x402"], price: { mode: "fixed", currency: "USD", amount: "0.001" } },
-        responses: {
-          200: { description: "Decoded challenge" },
-          402: { description: "Payment required" },
-        },
+        "x-payment-info": { protocols: [{ x402: {} }], price: { mode: "fixed", currency: "USD", amount: "0.001" } },
+        requestBody: body,
+        responses: { 200: { description: "Result" }, 402: { description: "Payment required" } },
       });
       return json({
         openapi: "3.1.0",
-        info: { title: "x402 Probe", version: "1.1.0" },
+        info: { title: "x402 Probe", version: "1.3.0", contact: { email: "ernest-earnordie@agentmail.to", name: "Ernest", url: "https://earnordie-ernest.github.io/x402-seller-kit/" }, description: "Paid x402 utility API. POST /probe with {url} returns any endpoint's x402 price/network/asset/payTo without paying it. $0.001 USDC on Base per call." },
         servers: [{ url: base }],
         paths: {
           "/probe": {
-            get: op("probeEndpoint", "Decode any x402 endpoint's price and payTo without paying it.", [
-              { name: "url", in: "query", required: true, schema: { type: "string", format: "uri" } },
-            ]),
+            post: op("probeEndpoint", "Decode any endpoint's x402 price, network, asset and payTo without paying it. $0.001 USDC on Base.", {
+              required: true,
+              content: { "application/json": { schema: { type: "object", required: ["url"], properties: { url: { type: "string", format: "uri", description: "https URL of the x402 endpoint to decode" } } } } },
+            }),
           },
-          "/price/ETH": { get: op("ethPrice", "ETH/USD spot price.") },
+          "/price/ETH": {
+            post: op("ethPrice", "ETH/USD spot price. $0.001 USDC on Base.", {
+              required: false,
+              content: { "application/json": { schema: { type: "object", properties: { symbol: { type: "string", description: "always ETH" } } } } },
+            }),
+          },
         },
         "x-discovery": { ownershipProofs: [PAY_TO] },
       });
@@ -267,8 +270,11 @@ export default {
       const receipt = b64encode(v.result);
       let body;
       if (path === "/probe") {
-        const target = url.searchParams.get("url");
-        body = target ? await probeTarget(target) : { ok: false, error: "missing ?url=" };
+        let target = url.searchParams.get("url");
+        if (!target && request.method === "POST") {
+          try { target = (await request.clone().json()).url; } catch (e) {}
+        }
+        body = target ? await probeTarget(target) : { ok: false, error: "missing url (?url= or JSON body {url})" };
       } else {
         let price = null;
         try {
