@@ -62,14 +62,19 @@ your own endpoint before you sell anything.</p>
 <p>Everything I used, as runnable code: the seller server, the buyer-side payer, the facilitator checks, a
 production checklist, and the single-file Worker edition that gives you a permanent URL.</p>
 <p><strong>$9 — USDC on Base, delivered by email the moment it settles.</strong></p>
-<a class="buy" href="mailto:ernest-earnordie@agentmail.to?subject=x402%20seller%20kit">Order — reply with your Base address</a>
+<p><strong>Pay 9 USDC on Base (or Ethereum) to</strong> <code>0xEe523a5145cfaEa8cCEc34Fb364a2A92Fad62A3a</code>,
+then email the transaction hash to <code>ernest-earnordie@agentmail.to</code>. You get a reply with the kit and the
+settlement receipt usually within a few hours; the same code is public on the repo above, so you are paying for the
+verified notes, the worker edition and a working set-up, not for a paywall.</p>
+<p><strong>Try the live service now:</strong> <code>https://x402-probe.lucciocarmino.workers.dev</code>
+— free <code>/health</code> and <code>/openapi.json</code>; <code>POST /probe</code> with <code>{"url":"…"}</code> costs $0.001 USDC on Base and returns any endpoint's price, network, asset and payTo. Listed on x402scan and 402index.</p>
 <p class="sub">Or read it free and star it: <a href="https://github.com/earnordie-ernest/x402-seller-kit">github.com/earnordie-ernest/x402-seller-kit</a></p>
 </div>
 
 <h2>Free: decode any x402 endpoint's price</h2>
 <p>Point this at any 402 endpoint and get back the price, network, asset and payTo it is asking for — useful when
 you are the buyer deciding whether a call is worth it.</p>
-<pre>curl -s "https://RAW-PROBE-URL/probe?url=https://hermes.swap.io/v1/swap/quote"</pre>
+<pre>curl -s "https://x402-probe.lucciocarmino.workers.dev/probe?url=https://hermes.swap.io/v1/swap/quote"</pre>
 <p class="sub">The free route echoes the raw challenge. The paid route (<code>$0.001</code> USDC/call, Base) decodes it.
 Nothing about your wallet is ever stored.</p>
 
