@@ -21,7 +21,7 @@ import urllib.error
 import urllib.parse
 import urllib.request
 
-from fastapi import FastAPI, Query
+from fastapi import FastAPI, Query, Request
 
 from x402.http import FacilitatorConfig, HTTPFacilitatorClient, PaymentOption
 from x402.http.middleware.fastapi import PaymentMiddlewareASGI
@@ -31,7 +31,7 @@ from x402.server import x402ResourceServer
 
 PAY_TO = os.environ.get("PAY_TO", "0xEe523a5145cfaEa8cCEc34Fb364a2A92Fad62A3a")
 NETWORK = os.environ.get("NETWORK", "eip155:8453")
-FACILITATOR_URL = os.environ.get("FACILITATOR_URL", "https://x402.dexter.cash")
+FACILITATOR_URL = os.environ.get("FACILITATOR_URL", "https://facilitator.xpay.sh")
 PRICE = os.environ.get("PRICE", "$0.001")
 
 app = FastAPI(title="x402 Probe")
@@ -91,6 +91,60 @@ def decode_challenge(value):
 async def health():
     return {"ok": True, "service": "x402-probe", "network": NETWORK, "price": PRICE}
 
+
+@app.get("/.well-known/x402")
+async def wellknown(request: Request):
+    import os as _os
+    base = str(request.base_url).rstrip("/")
+    return {
+        "version": 1,
+        "resources": [base + "/probe?url=https://hermes.swap.io/v1/swap/quote"],
+        "ownershipProofs": [PAY_TO],
+        "instructions": "GET /probe?url=<paid-endpoint> returns that endpoint's x402 challenge (price/network/asset/payTo).",
+    }
+
+@app.get("/openapi.json")
+async def openapi(request: Request):
+    base = str(request.base_url).rstrip("/")
+    return {
+        "openapi": "3.1.0",
+        "info": {"title": "x402 Probe", "version": "1.0.0"},
+        "paths": {
+            "/probe": {
+                "get": {
+                    "operationId": "probeEndpoint",
+                    "summary": "Decode any x402 endpoint's price and payTo without paying it.",
+                    "parameters": [{"name": "url", "in": "query", "required": True,
+                                    "schema": {"type": "string", "format": "uri"}}],
+                    "x-payment-info": {"protocols": ["x402"],
+                                       "price": {"mode": "fixed", "currency": "USD", "amount": "0.001"}},
+                    "responses": {
+                        "200": {"description": "Decoded challenge"},
+                        "402": {"description": "Payment required"},
+                    },
+                }
+            }
+        },
+        "x-discovery": {"ownershipProofs": [PAY_TO]},
+    }
+
+@app.get("/.well-known/x402.json")
+async def manifest(request: Request):
+    import os as _os
+    base = str(request.base_url).rstrip("/")
+    return {
+        "x402Version": 2,
+        "name": "x402-probe",
+        "description": "Decode any x402 endpoint's price, network, asset and payTo without paying it.",
+        "resources": [{
+            "resource": base + "/probe",
+            "method": "GET",
+            "description": "Pass ?url=<paid endpoint>; returns its x402 challenge (price/network/asset/payTo). Handles v2 header and v1 JSON-body challenges.",
+            "price": _os.environ.get("PRICE", "$0.001"),
+            "network": NETWORK,
+            "payTo": PAY_TO,
+        }],
+    }
 
 @app.get("/probe")
 async def probe(url: str = Query(..., description="x402 endpoint URL to inspect")):
