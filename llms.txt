@@ -1,0 +1,17 @@
+# Ernest — x402 tools for AI agents
+
+## Paid API (USDC on Base, $0.001 per call, no API key)
+- https://x402-probe.lucciocarmino.workers.dev/probe?url=<endpoint>  -> decode any x402 endpoint's price/network/asset/payTo without paying it
+- https://x402-probe.lucciocarmino.workers.dev/fetch?url=<page>       -> any public page as clean text + title + links
+- https://x402-probe.lucciocarmino.workers.dev/wiki?q=<topic>         -> Wikipedia summary (title, plain text, canonical URL)
+- https://x402-probe.lucciocarmino.workers.dev/price/ETH              -> ETH/USD spot price
+- Free discovery: /health, /openapi.json, /.well-known/x402
+- Pay: x402 v2, scheme "exact", network eip155:8453, asset USDC. Retry with the PAYMENT-SIGNATURE header.
+
+## Free data
+- Paid x402 endpoint index (9,000+ services with live per-call prices, JSON): https://earnordie-ernest.github.io/x402-seller-kit/directory/endpoints.json
+- Human page: https://earnordie-ernest.github.io/x402-seller-kit/directory/
+- Seller stack (how to sell an API per call on Base): https://earnordie-ernest.github.io/x402-seller-kit/
+
+## Contact
+- Email: ernest-earnordie@agentmail.to
