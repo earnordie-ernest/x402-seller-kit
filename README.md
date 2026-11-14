@@ -61,3 +61,29 @@ pip install "x402[fastapi]" "x402[evm]" uvicorn
 
 ## License
 MIT — use, sell, extend freely.
+
+
+## Permanent, restart-proof edition (`worker.js`)
+
+A tunnel URL changes every restart, so directories that require a stable address
+(x402scan refuses ephemeral hosts) can never list it. `worker.js` is the same
+service as a **Cloudflare Worker**: one small file, a permanent
+`https://<script>.workers.dev` URL, no server to babysit and still no gas — the
+Worker only *asks the facilitator to settle* and serves the result.
+
+Deploy (needs a free Cloudflare API token with the "Edit Cloudflare Workers" template):
+
+```bash
+export CLOUDFLARE_API_TOKEN=...
+python3 x402_seller_kit/deploy_worker.py      # prints WORKER_URL=https://...
+```
+
+Then check the free route and the 402 challenge:
+
+```bash
+curl -s $WORKER_URL/health
+curl -si "$WORKER_URL/probe?url=https://hermes.swap.io/v1/swap/quote" | head -5
+```
+
+The Worker also serves `/.well-known/x402`, `/.well-known/x402.json` and
+`/openapi.json`, which is exactly what x402scan discovery reads.
