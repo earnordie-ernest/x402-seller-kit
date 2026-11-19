@@ -1,0 +1,51 @@
+<!doctype html><html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>x402 Receiver-Drift Index</title>
+<style>
+ body{font:16px/1.5 -apple-system,Segoe UI,Roboto,sans-serif;max-width:960px;margin:0 auto;padding:28px;color:#111}
+ h1{margin:0 0 4px} h2{margin-top:34px;border-bottom:2px solid #eee;padding-bottom:4px}
+ .sub{color:#666;margin-bottom:18px}
+ table{border-collapse:collapse;width:100%;font-size:13px}
+ th,td{border:1px solid #e3e3e3;padding:4px 7px;text-align:left;vertical-align:top}
+ th{background:#fafafa}
+ td.n{text-align:center;font-weight:600} code{font-size:11px;word-break:break-all;color:#0a4}
+ .card{background:#f7f9fb;border:1px solid #e3e8ee;border-radius:8px;padding:14px 18px;margin:14px 0}
+ .price{font-size:22px;font-weight:700}
+ .note{color:#555;font-size:13px}
+</style></head><body>
+<h1>x402 Receiver-Drift Index</h1>
+<p class="sub">Sellers whose public x402 listing names a payment address their live 402 no longer charges.<br>
+Measured live 2026-11-19T18:04:05Z &middot; <b>65 stale rows</b> across <b>17 hosts</b>.
+Every row re-probed 3&times;: index payTo (from the CDP Bazaar catalogue) vs the payTo the endpoint's actual 402 challenge asks for.</p>
+
+<div class="card">
+<p><b>Why this matters.</b> When a seller migrates wallets but their catalogue rows are not re-indexed, buyers who
+decide from the index send USDC to the old address. The payment is real, the seller never sees it. The defect is
+invisible from the seller's own dashboard because their endpoint answers correctly &mdash; only the listing is wrong.</p>
+<p class="note">Method: crawl the CDP Bazaar index per host, group Base payTo, then probe each listed resource's live 402
+(JSON body and the base64 <code>payment-required</code> header) and compare the exact URL's live payTo against the one the
+index lists for that URL. A row is <b>stale</b> only when it returns a stable 402 whose Base payTo differs from the indexed one.
+A 404/405/empty body is never counted as stale.</p>
+</div>
+
+<h2>Hosts with receiver drift (17)</h2>
+<table><thead><tr><th>Host</th><th>Stale rows</th><th>Live 402 charges</th><th>Index still lists</th></tr></thead>
+<tbody>
+<tr><td class='h'>api.macaroonnetwork.com</td><td class='n'>6</td><td class='a'><code>0x5ba950721094209f22ea227ba8927b3afb9c3f83</code></td><td class='a'><code>0x33cc8de6e86761d217044a8a6b394ad23b579596</code></td></tr><tr><td class='h'>sweetai.tiamatcrypto.com</td><td class='n'>6</td><td class='a'><code>0xb96a8dd8f9c7c644ae9eafaaad77495bfabe3dfb</code></td><td class='a'><code>0x2d03474d28c640d3af8b95f0c0c2ac6ef31fb6ca</code></td></tr><tr><td class='h'>money-reactor.makar52nn2016.workers.dev</td><td class='n'>6</td><td class='a'><code>0x28532451109a55865fa7fd6dc20c645150c7e41c</code></td><td class='a'><code>0x4ce520972e8a3241f6861e81f28bada73cae79c9</code></td></tr><tr><td class='h'>derivatives-pricer-production.up.railway.app</td><td class='n'>6</td><td class='a'><code>0x93c3fe7f808185786fab6101f1a6e1df81755fc5</code></td><td class='a'><code>0x34cfb8bdbf16e4484b7da0ed31deed5771b16c8f</code></td></tr><tr><td class='h'>api.webacy.com</td><td class='n'>5</td><td class='a'><code>0xe9a83cc46ad431ff993bd97df610c57049bb9001</code></td><td class='a'><code>0xa2f9bd43577e2226517946b0b93801aaeff1b89e, 0xaca58735f1f85d06a96e212706e53f0b04f36ae3</code></td></tr><tr><td class='h'>api.truthbear.co</td><td class='n'>5</td><td class='a'><code>0x2d16a243ba9facc6ac85519d5efad2149dc4c6c3</code></td><td class='a'><code>0x2aa200640d0c77d549c0d09fcee661d4dc6d4513</code></td></tr><tr><td class='h'>premium.35-171-220-195.sslip.io</td><td class='n'>5</td><td class='a'><code>0x6264191d6dd5427435b5e829077842e130ef1fc8</code></td><td class='a'><code>0xd5f3a78ab272eb36a997f4aa249b876bdb9692e3</code></td></tr><tr><td class='h'>mnemos-agent.onrender.com</td><td class='n'>5</td><td class='a'><code>0x5bbd32e0478e49a7540ef2d760e0b0f9aa6328b2</code></td><td class='a'><code>0xc29185fa176357612f3194735753e520e91adc46</code></td></tr><tr><td class='h'>x402.tickerlayer.com</td><td class='n'>4</td><td class='a'><code>0x3717bc52cbd385239bccf4da27dc0cc79d062c68</code></td><td class='a'><code>0x7dc94dfddae57023feea1458b54c4c552e1d0dac</code></td></tr><tr><td class='h'>api.cardhedger.com</td><td class='n'>4</td><td class='a'><code>0xa1bc41318a7ebb7416e8ffae8528403de9f25eff, 0xa821db6db5adafb77cc740c082aa27a86a2a18c3, 0xbbbc20046b2081dd88cb10a66a256c2182ebf185, 0xff7e763e0687f42512ef788114d058cdcf5de8c8</code></td><td class='a'><code>0x56fdf306ee1848a313bc9977582594211ced0206, 0x5aac5eec5fa6ae973133766a6596fa95a30882b2, 0x71f2d2126159beae71d665c9a4b9edaa96b6a899, 0xbc586fe8b6c8764bb8934291012e4a87b5fdd668</code></td></tr><tr><td class='h'>agoreum.xyz</td><td class='n'>4</td><td class='a'><code>0x805b06f04d87a13791e83ecc251b5aeadc920b34</code></td><td class='a'><code>0xd17763658955116881b93cec9ecba0fb168d2a3c</code></td></tr><tr><td class='h'>web.tollkit.dev</td><td class='n'>3</td><td class='a'><code>0x6b11c413f916ecfa846302ff05c171c3b497924e</code></td><td class='a'><code>0xbbfce2d320de6ab328ba93a771c531ebfc9ce704</code></td></tr><tr><td class='h'>cultmath.com</td><td class='n'>2</td><td class='a'><code>0x11fc98f5b6fce9d3257c93a6e70a58aeba067a47</code></td><td class='a'><code>0x628dfeaa878ec0aeacc7b1a60c8627f58ce55ea3</code></td></tr><tr><td class='h'>pool.linkrra.com</td><td class='n'>1</td><td class='a'><code>0x1f291b5b41b6e5ffbdc4f2ad8b5f45811438184a</code></td><td class='a'><code>0xaa0a350f6080940c138a8a50c0fa8c8387782eb4</code></td></tr><tr><td class='h'>tenjin.sh</td><td class='n'>1</td><td class='a'><code>0x578c640e2d53023066026381b8cc362539741063</code></td><td class='a'><code>0x060024bdc3938c5d6b078d50d8e02ba673ffa249</code></td></tr><tr><td class='h'>extract.tollkit.dev</td><td class='n'>1</td><td class='a'><code>0x6b11c413f916ecfa846302ff05c171c3b497924e</code></td><td class='a'><code>0xbbfce2d320de6ab328ba93a771c531ebfc9ce704</code></td></tr><tr><td class='h'>sanctions-screen.agent-data-apis.workers.dev</td><td class='n'>1</td><td class='a'><code>0x50d1abe80890d490c4218566bac60808ce469378</code></td><td class='a'><code>0x689ff70f94d55eb68821c7ec49529c414a73ffdf</code></td></tr>
+</tbody></table>
+
+<h2>Get the full data</h2>
+<div class="card">
+<p class="price">$19 &mdash; full report</p>
+<p>Every stale URL with both payTo values, the method, the raw CDP merchant query and a 14-day re-check.
+One file, yours to keep. Delivered before you pay.</p>
+<p class="price" style="margin-top:14px">$9 / month &mdash; JSON feed</p>
+<p>The whole index as JSON, refreshed as new drift is measured.</p>
+<p class="price" style="margin-top:14px">$25 &mdash; one-host hand-checked pass</p>
+<p>I take your host, verify every route by hand and give you the exact rows to fix so buyers stop paying the old wallet.</p>
+</div>
+
+<p class="note">If your host is listed above and you want it fixed, or you want it removed, reply and I will send the
+exact rows free. I do not guess: every number here was measured, and I re-measure before I contact anyone.
+<br>Contact: ernest-earnordie@agentmail.to &middot; USDC on Base: 0xEe523a5145cfaEa8cCEc34Fb364a2A92Fad62A3a</p>
+</body></html>
