@@ -1,0 +1,887 @@
+{
+ "generated": "2026-11-19T21:05:00Z",
+ "total_stale_rows": 79,
+ "hosts": 18,
+ "data": [
+  {
+   "host": "squeezeos-api.onrender.com",
+   "stale_rows": [
+    {
+     "resource": "https://squeezeos-api.onrender.com/api/alpha-sentinel/deep-analysis",
+     "method": "GET",
+     "live": [
+      "0x5bbd32e0478e49a7540ef2d760e0b0f9aa6328b2"
+     ],
+     "listed": [
+      "0xc29185fa176357612f3194735753e520e91adc46"
+     ]
+    },
+    {
+     "resource": "https://squeezeos-api.onrender.com/v1/livewire/market/session",
+     "method": "GET",
+     "live": [
+      "0x5bbd32e0478e49a7540ef2d760e0b0f9aa6328b2"
+     ],
+     "listed": [
+      "0xc29185fa176357612f3194735753e520e91adc46"
+     ]
+    },
+    {
+     "resource": "https://squeezeos-api.onrender.com/citegate/citation-check",
+     "method": "GET",
+     "live": [
+      "0x5bbd32e0478e49a7540ef2d760e0b0f9aa6328b2"
+     ],
+     "listed": [
+      "0xc29185fa176357612f3194735753e520e91adc46"
+     ]
+    },
+    {
+     "resource": "https://squeezeos-api.onrender.com/api/compliance/anomalies/AAPL",
+     "method": "GET",
+     "live": [
+      "0x5bbd32e0478e49a7540ef2d760e0b0f9aa6328b2"
+     ],
+     "listed": [
+      "0xc29185fa176357612f3194735753e520e91adc46"
+     ]
+    },
+    {
+     "resource": "https://squeezeos-api.onrender.com/api/compliance/score/AAPL",
+     "method": "GET",
+     "live": [
+      "0x5bbd32e0478e49a7540ef2d760e0b0f9aa6328b2"
+     ],
+     "listed": [
+      "0xc29185fa176357612f3194735753e520e91adc46"
+     ]
+    },
+    {
+     "resource": "https://squeezeos-api.onrender.com/api/dossier/AAPL",
+     "method": "GET",
+     "live": [
+      "0x5bbd32e0478e49a7540ef2d760e0b0f9aa6328b2"
+     ],
+     "listed": [
+      "0xc29185fa176357612f3194735753e520e91adc46"
+     ]
+    },
+    {
+     "resource": "https://squeezeos-api.onrender.com/api/gamma-sonar/AAPL",
+     "method": "GET",
+     "live": [
+      "0x5bbd32e0478e49a7540ef2d760e0b0f9aa6328b2"
+     ],
+     "listed": [
+      "0xc29185fa176357612f3194735753e520e91adc46"
+     ]
+    },
+    {
+     "resource": "https://squeezeos-api.onrender.com/api/web/extract-once",
+     "method": "GET",
+     "live": [
+      "0x5bbd32e0478e49a7540ef2d760e0b0f9aa6328b2"
+     ],
+     "listed": [
+      "0xc29185fa176357612f3194735753e520e91adc46"
+     ]
+    },
+    {
+     "resource": "https://squeezeos-api.onrender.com/api/compliance/anomalies/TESTBANK",
+     "method": "GET",
+     "live": [
+      "0x5bbd32e0478e49a7540ef2d760e0b0f9aa6328b2"
+     ],
+     "listed": [
+      "0xc29185fa176357612f3194735753e520e91adc46"
+     ]
+    },
+    {
+     "resource": "https://squeezeos-api.onrender.com/api/compliance/score/TESTBANK",
+     "method": "GET",
+     "live": [
+      "0x5bbd32e0478e49a7540ef2d760e0b0f9aa6328b2"
+     ],
+     "listed": [
+      "0xc29185fa176357612f3194735753e520e91adc46"
+     ]
+    },
+    {
+     "resource": "https://squeezeos-api.onrender.com/api/cascade/signal",
+     "method": "GET",
+     "live": [
+      "0x5bbd32e0478e49a7540ef2d760e0b0f9aa6328b2"
+     ],
+     "listed": [
+      "0xc29185fa176357612f3194735753e520e91adc46"
+     ]
+    },
+    {
+     "resource": "https://squeezeos-api.onrender.com/v1/livewire/prediction/intelligence",
+     "method": "GET",
+     "live": [
+      "0x5bbd32e0478e49a7540ef2d760e0b0f9aa6328b2"
+     ],
+     "listed": [
+      "0xc29185fa176357612f3194735753e520e91adc46"
+     ]
+    },
+    {
+     "resource": "https://squeezeos-api.onrender.com/triple-trigger/scan",
+     "method": "GET",
+     "live": [
+      "0x5bbd32e0478e49a7540ef2d760e0b0f9aa6328b2"
+     ],
+     "listed": [
+      "0xc29185fa176357612f3194735753e520e91adc46"
+     ]
+    },
+    {
+     "resource": "https://squeezeos-api.onrender.com/api/canon/batch",
+     "method": "GET",
+     "live": [
+      "0x5bbd32e0478e49a7540ef2d760e0b0f9aa6328b2"
+     ],
+     "listed": [
+      "0xc29185fa176357612f3194735753e520e91adc46"
+     ]
+    },
+    {
+     "resource": "https://squeezeos-api.onrender.com/api/fx/credits",
+     "method": "GET",
+     "live": [
+      "0x5bbd32e0478e49a7540ef2d760e0b0f9aa6328b2"
+     ],
+     "listed": [
+      "0xc29185fa176357612f3194735753e520e91adc46"
+     ]
+    },
+    {
+     "resource": "https://squeezeos-api.onrender.com/api/utility/credits",
+     "method": "GET",
+     "live": [
+      "0x5bbd32e0478e49a7540ef2d760e0b0f9aa6328b2"
+     ],
+     "listed": [
+      "0xc29185fa176357612f3194735753e520e91adc46"
+     ]
+    },
+    {
+     "resource": "https://squeezeos-api.onrender.com/api/x402/settlement/credits",
+     "method": "GET",
+     "live": [
+      "0x5bbd32e0478e49a7540ef2d760e0b0f9aa6328b2"
+     ],
+     "listed": [
+      "0xc29185fa176357612f3194735753e520e91adc46"
+     ]
+    },
+    {
+     "resource": "https://squeezeos-api.onrender.com/api/market/snapshot",
+     "method": "GET",
+     "live": [
+      "0x5bbd32e0478e49a7540ef2d760e0b0f9aa6328b2"
+     ],
+     "listed": [
+      "0xc29185fa176357612f3194735753e520e91adc46"
+     ]
+    },
+    {
+     "resource": "https://squeezeos-api.onrender.com/api/enrich/domain",
+     "method": "GET",
+     "live": [
+      "0x5bbd32e0478e49a7540ef2d760e0b0f9aa6328b2"
+     ],
+     "listed": [
+      "0xc29185fa176357612f3194735753e520e91adc46"
+     ]
+    },
+    {
+     "resource": "https://squeezeos-api.onrender.com/api/signals/full/AAPL",
+     "method": "GET",
+     "live": [
+      "0x5bbd32e0478e49a7540ef2d760e0b0f9aa6328b2"
+     ],
+     "listed": [
+      "0xc29185fa176357612f3194735753e520e91adc46"
+     ]
+    }
+   ]
+  },
+  {
+   "host": "api.macaroonnetwork.com",
+   "stale_rows": [
+    {
+     "resource": "https://api.macaroonnetwork.com/execute/wallet-nonce-v1",
+     "method": "GET",
+     "live": [
+      "0x5ba950721094209f22ea227ba8927b3afb9c3f83"
+     ],
+     "listed": [
+      "0x33cc8de6e86761d217044a8a6b394ad23b579596"
+     ]
+    },
+    {
+     "resource": "https://api.macaroonnetwork.com/execute/universal-macaroon-search-v1",
+     "method": "GET",
+     "live": [
+      "0x5ba950721094209f22ea227ba8927b3afb9c3f83"
+     ],
+     "listed": [
+      "0x33cc8de6e86761d217044a8a6b394ad23b579596"
+     ]
+    },
+    {
+     "resource": "https://api.macaroonnetwork.com/execute/us-weather-forecast-alerts-v1",
+     "method": "GET",
+     "live": [
+      "0x5ba950721094209f22ea227ba8927b3afb9c3f83"
+     ],
+     "listed": [
+      "0x33cc8de6e86761d217044a8a6b394ad23b579596"
+     ]
+    },
+    {
+     "resource": "https://api.macaroonnetwork.com/execute/wallet-risk-check-v1",
+     "method": "GET",
+     "live": [
+      "0x5ba950721094209f22ea227ba8927b3afb9c3f83"
+     ],
+     "listed": [
+      "0x33cc8de6e86761d217044a8a6b394ad23b579596"
+     ]
+    },
+    {
+     "resource": "https://api.macaroonnetwork.com/execute/weathernext-point-forecast-v1",
+     "method": "GET",
+     "live": [
+      "0x5ba950721094209f22ea227ba8927b3afb9c3f83"
+     ],
+     "listed": [
+      "0x33cc8de6e86761d217044a8a6b394ad23b579596"
+     ]
+    },
+    {
+     "resource": "https://api.macaroonnetwork.com/execute/vat-validate-v1",
+     "method": "GET",
+     "live": [
+      "0x5ba950721094209f22ea227ba8927b3afb9c3f83"
+     ],
+     "listed": [
+      "0x33cc8de6e86761d217044a8a6b394ad23b579596"
+     ]
+    }
+   ]
+  },
+  {
+   "host": "sweetai.tiamatcrypto.com",
+   "stale_rows": [
+    {
+     "resource": "https://sweetai.tiamatcrypto.com/api/v1/trading-signal",
+     "method": "GET",
+     "live": [
+      "0xb96a8dd8f9c7c644ae9eafaaad77495bfabe3dfb"
+     ],
+     "listed": [
+      "0x2d03474d28c640d3af8b95f0c0c2ac6ef31fb6ca"
+     ]
+    },
+    {
+     "resource": "https://sweetai.tiamatcrypto.com/api/v1/agent-safety",
+     "method": "GET",
+     "live": [
+      "0xb96a8dd8f9c7c644ae9eafaaad77495bfabe3dfb"
+     ],
+     "listed": [
+      "0x2d03474d28c640d3af8b95f0c0c2ac6ef31fb6ca"
+     ]
+    },
+    {
+     "resource": "https://sweetai.tiamatcrypto.com/api/v1/trading/decisions",
+     "method": "GET",
+     "live": [
+      "0xb96a8dd8f9c7c644ae9eafaaad77495bfabe3dfb"
+     ],
+     "listed": [
+      "0x2d03474d28c640d3af8b95f0c0c2ac6ef31fb6ca"
+     ]
+    },
+    {
+     "resource": "https://sweetai.tiamatcrypto.com/api/v1/alpha/pump-alerts",
+     "method": "GET",
+     "live": [
+      "0xb96a8dd8f9c7c644ae9eafaaad77495bfabe3dfb"
+     ],
+     "listed": [
+      "0x2d03474d28c640d3af8b95f0c0c2ac6ef31fb6ca"
+     ]
+    },
+    {
+     "resource": "https://sweetai.tiamatcrypto.com/api/v1/agent/AGENT_ID/sla",
+     "method": "GET",
+     "live": [
+      "0xb96a8dd8f9c7c644ae9eafaaad77495bfabe3dfb"
+     ],
+     "listed": [
+      "0x2d03474d28c640d3af8b95f0c0c2ac6ef31fb6ca"
+     ]
+    },
+    {
+     "resource": "https://sweetai.tiamatcrypto.com/api/v1/leaderboard",
+     "method": "GET",
+     "live": [
+      "0xb96a8dd8f9c7c644ae9eafaaad77495bfabe3dfb"
+     ],
+     "listed": [
+      "0x2d03474d28c640d3af8b95f0c0c2ac6ef31fb6ca"
+     ]
+    }
+   ]
+  },
+  {
+   "host": "money-reactor.makar52nn2016.workers.dev",
+   "stale_rows": [
+    {
+     "resource": "https://money-reactor.makar52nn2016.workers.dev/api/color",
+     "method": "GET",
+     "live": [
+      "0x28532451109a55865fa7fd6dc20c645150c7e41c"
+     ],
+     "listed": [
+      "0x4ce520972e8a3241f6861e81f28bada73cae79c9"
+     ]
+    },
+    {
+     "resource": "https://money-reactor.makar52nn2016.workers.dev/api/base64",
+     "method": "GET",
+     "live": [
+      "0x28532451109a55865fa7fd6dc20c645150c7e41c"
+     ],
+     "listed": [
+      "0x4ce520972e8a3241f6861e81f28bada73cae79c9"
+     ]
+    },
+    {
+     "resource": "https://money-reactor.makar52nn2016.workers.dev/api/ai-sentiment",
+     "method": "GET",
+     "live": [
+      "0x28532451109a55865fa7fd6dc20c645150c7e41c"
+     ],
+     "listed": [
+      "0x4ce520972e8a3241f6861e81f28bada73cae79c9"
+     ]
+    },
+    {
+     "resource": "https://money-reactor.makar52nn2016.workers.dev/api/fx-rates",
+     "method": "GET",
+     "live": [
+      "0x28532451109a55865fa7fd6dc20c645150c7e41c"
+     ],
+     "listed": [
+      "0x4ce520972e8a3241f6861e81f28bada73cae79c9"
+     ]
+    },
+    {
+     "resource": "https://money-reactor.makar52nn2016.workers.dev/api/cron-next",
+     "method": "GET",
+     "live": [
+      "0x28532451109a55865fa7fd6dc20c645150c7e41c"
+     ],
+     "listed": [
+      "0x4ce520972e8a3241f6861e81f28bada73cae79c9"
+     ]
+    },
+    {
+     "resource": "https://money-reactor.makar52nn2016.workers.dev/api/uuid",
+     "method": "GET",
+     "live": [
+      "0x28532451109a55865fa7fd6dc20c645150c7e41c"
+     ],
+     "listed": [
+      "0x4ce520972e8a3241f6861e81f28bada73cae79c9"
+     ]
+    }
+   ]
+  },
+  {
+   "host": "derivatives-pricer-production.up.railway.app",
+   "stale_rows": [
+    {
+     "resource": "https://derivatives-pricer-production.up.railway.app/v1/option/scenario-from-surface",
+     "method": "POST",
+     "live": [
+      "0x93c3fe7f808185786fab6101f1a6e1df81755fc5"
+     ],
+     "listed": [
+      "0x34cfb8bdbf16e4484b7da0ed31deed5771b16c8f"
+     ]
+    },
+    {
+     "resource": "https://derivatives-pricer-production.up.railway.app/v1/portfolio/scenario",
+     "method": "POST",
+     "live": [
+      "0x93c3fe7f808185786fab6101f1a6e1df81755fc5"
+     ],
+     "listed": [
+      "0x34cfb8bdbf16e4484b7da0ed31deed5771b16c8f"
+     ]
+    },
+    {
+     "resource": "https://derivatives-pricer-production.up.railway.app/v1/portfolio/greeks",
+     "method": "POST",
+     "live": [
+      "0x93c3fe7f808185786fab6101f1a6e1df81755fc5"
+     ],
+     "listed": [
+      "0x34cfb8bdbf16e4484b7da0ed31deed5771b16c8f"
+     ]
+    },
+    {
+     "resource": "https://derivatives-pricer-production.up.railway.app/v1/option/price-from-surface",
+     "method": "POST",
+     "live": [
+      "0x93c3fe7f808185786fab6101f1a6e1df81755fc5"
+     ],
+     "listed": [
+      "0x34cfb8bdbf16e4484b7da0ed31deed5771b16c8f"
+     ]
+    },
+    {
+     "resource": "https://derivatives-pricer-production.up.railway.app/v1/volatility/surface",
+     "method": "POST",
+     "live": [
+      "0x93c3fe7f808185786fab6101f1a6e1df81755fc5"
+     ],
+     "listed": [
+      "0x34cfb8bdbf16e4484b7da0ed31deed5771b16c8f"
+     ]
+    },
+    {
+     "resource": "https://derivatives-pricer-production.up.railway.app/v1/option/implied-vol",
+     "method": "POST",
+     "live": [
+      "0x93c3fe7f808185786fab6101f1a6e1df81755fc5"
+     ],
+     "listed": [
+      "0x34cfb8bdbf16e4484b7da0ed31deed5771b16c8f"
+     ]
+    }
+   ]
+  },
+  {
+   "host": "api.webacy.com",
+   "stale_rows": [
+    {
+     "resource": "https://api.webacy.com/source-code/:contractAddress",
+     "method": "GET",
+     "live": [
+      "0x9c450b04fed2d8345b22ddd0c576d12483cf85c3"
+     ],
+     "listed": [
+      "0xa2f9bd43577e2226517946b0b93801aaeff1b89e"
+     ]
+    },
+    {
+     "resource": "https://api.webacy.com/addresses/:address/approvals",
+     "method": "GET",
+     "live": [
+      "0x9c450b04fed2d8345b22ddd0c576d12483cf85c3"
+     ],
+     "listed": [
+      "0xa2f9bd43577e2226517946b0b93801aaeff1b89e"
+     ]
+    },
+    {
+     "resource": "https://api.webacy.com/contracts/:contractAddress",
+     "method": "GET",
+     "live": [
+      "0x9c450b04fed2d8345b22ddd0c576d12483cf85c3"
+     ],
+     "listed": [
+      "0xaca58735f1f85d06a96e212706e53f0b04f36ae3"
+     ]
+    },
+    {
+     "resource": "https://api.webacy.com/sanctioned/:address",
+     "method": "GET",
+     "live": [
+      "0x9c450b04fed2d8345b22ddd0c576d12483cf85c3"
+     ],
+     "listed": [
+      "0xaca58735f1f85d06a96e212706e53f0b04f36ae3"
+     ]
+    },
+    {
+     "resource": "https://api.webacy.com/addresses/:address",
+     "method": "GET",
+     "live": [
+      "0x9c450b04fed2d8345b22ddd0c576d12483cf85c3"
+     ],
+     "listed": [
+      "0xaca58735f1f85d06a96e212706e53f0b04f36ae3"
+     ]
+    }
+   ]
+  },
+  {
+   "host": "premium.35-171-220-195.sslip.io",
+   "stale_rows": [
+    {
+     "resource": "https://premium.35-171-220-195.sslip.io/v1/sol/verdict-delta/:mint",
+     "method": "GET",
+     "live": [
+      "0x6264191d6dd5427435b5e829077842e130ef1fc8"
+     ],
+     "listed": [
+      "0xd5f3a78ab272eb36a997f4aa249b876bdb9692e3"
+     ]
+    },
+    {
+     "resource": "https://premium.35-171-220-195.sslip.io/v1/sol/token-verdict/:mint",
+     "method": "GET",
+     "live": [
+      "0x6264191d6dd5427435b5e829077842e130ef1fc8"
+     ],
+     "listed": [
+      "0xd5f3a78ab272eb36a997f4aa249b876bdb9692e3"
+     ]
+    },
+    {
+     "resource": "https://premium.35-171-220-195.sslip.io/v1/sol/token-verdict-batch",
+     "method": "GET",
+     "live": [
+      "0x6264191d6dd5427435b5e829077842e130ef1fc8"
+     ],
+     "listed": [
+      "0xd5f3a78ab272eb36a997f4aa249b876bdb9692e3"
+     ]
+    },
+    {
+     "resource": "https://premium.35-171-220-195.sslip.io/v1/sol/rug-lite/:mint",
+     "method": "GET",
+     "live": [
+      "0x6264191d6dd5427435b5e829077842e130ef1fc8"
+     ],
+     "listed": [
+      "0xd5f3a78ab272eb36a997f4aa249b876bdb9692e3"
+     ]
+    },
+    {
+     "resource": "https://premium.35-171-220-195.sslip.io/v1/eth/token-verdict",
+     "method": "GET",
+     "live": [
+      "0x6264191d6dd5427435b5e829077842e130ef1fc8"
+     ],
+     "listed": [
+      "0xd5f3a78ab272eb36a997f4aa249b876bdb9692e3"
+     ]
+    }
+   ]
+  },
+  {
+   "host": "mnemos-agent.onrender.com",
+   "stale_rows": [
+    {
+     "resource": "https://mnemos-agent.onrender.com/v1/options/scan",
+     "method": "GET",
+     "live": [
+      "0x5bbd32e0478e49a7540ef2d760e0b0f9aa6328b2"
+     ],
+     "listed": [
+      "0xc29185fa176357612f3194735753e520e91adc46"
+     ]
+    },
+    {
+     "resource": "https://mnemos-agent.onrender.com/v1/compliance/screen",
+     "method": "GET",
+     "live": [
+      "0x5bbd32e0478e49a7540ef2d760e0b0f9aa6328b2"
+     ],
+     "listed": [
+      "0xc29185fa176357612f3194735753e520e91adc46"
+     ]
+    },
+    {
+     "resource": "https://mnemos-agent.onrender.com/options",
+     "method": "GET",
+     "live": [
+      "0x5bbd32e0478e49a7540ef2d760e0b0f9aa6328b2"
+     ],
+     "listed": [
+      "0xc29185fa176357612f3194735753e520e91adc46"
+     ]
+    },
+    {
+     "resource": "https://mnemos-agent.onrender.com/v1/arb/scan",
+     "method": "GET",
+     "live": [
+      "0x5bbd32e0478e49a7540ef2d760e0b0f9aa6328b2"
+     ],
+     "listed": [
+      "0xc29185fa176357612f3194735753e520e91adc46"
+     ]
+    },
+    {
+     "resource": "https://mnemos-agent.onrender.com/v1/gas/recommend",
+     "method": "GET",
+     "live": [
+      "0x5bbd32e0478e49a7540ef2d760e0b0f9aa6328b2"
+     ],
+     "listed": [
+      "0xc29185fa176357612f3194735753e520e91adc46"
+     ]
+    }
+   ]
+  },
+  {
+   "host": "x402.tickerlayer.com",
+   "stale_rows": [
+    {
+     "resource": "https://x402.tickerlayer.com/v1/markets/status",
+     "method": "GET",
+     "live": [
+      "0x3717bc52cbd385239bccf4da27dc0cc79d062c68"
+     ],
+     "listed": [
+      "0x7dc94dfddae57023feea1458b54c4c552e1d0dac"
+     ]
+    },
+    {
+     "resource": "https://x402.tickerlayer.com/v1/commodities/symbols",
+     "method": "GET",
+     "live": [
+      "0x3717bc52cbd385239bccf4da27dc0cc79d062c68"
+     ],
+     "listed": [
+      "0x7dc94dfddae57023feea1458b54c4c552e1d0dac"
+     ]
+    },
+    {
+     "resource": "https://x402.tickerlayer.com/v1/indices/symbols",
+     "method": "GET",
+     "live": [
+      "0x3717bc52cbd385239bccf4da27dc0cc79d062c68"
+     ],
+     "listed": [
+      "0x7dc94dfddae57023feea1458b54c4c552e1d0dac"
+     ]
+    },
+    {
+     "resource": "https://x402.tickerlayer.com/v1/markets/holidays",
+     "method": "GET",
+     "live": [
+      "0x3717bc52cbd385239bccf4da27dc0cc79d062c68"
+     ],
+     "listed": [
+      "0x7dc94dfddae57023feea1458b54c4c552e1d0dac"
+     ]
+    }
+   ]
+  },
+  {
+   "host": "agoreum.xyz",
+   "stale_rows": [
+    {
+     "resource": "https://agoreum.xyz/api/v1/x402/tools/payment-feedback",
+     "method": "POST",
+     "live": [
+      "0x805b06f04d87a13791e83ecc251b5aeadc920b34"
+     ],
+     "listed": [
+      "0xd17763658955116881b93cec9ecba0fb168d2a3c"
+     ]
+    },
+    {
+     "resource": "https://agoreum.xyz/api/v1/x402/tools/usdc-payment-check",
+     "method": "POST",
+     "live": [
+      "0x805b06f04d87a13791e83ecc251b5aeadc920b34"
+     ],
+     "listed": [
+      "0xd17763658955116881b93cec9ecba0fb168d2a3c"
+     ]
+    },
+    {
+     "resource": "https://agoreum.xyz/api/v1/x402/tools/mcp-server-check",
+     "method": "POST",
+     "live": [
+      "0x805b06f04d87a13791e83ecc251b5aeadc920b34"
+     ],
+     "listed": [
+      "0xd17763658955116881b93cec9ecba0fb168d2a3c"
+     ]
+    },
+    {
+     "resource": "https://agoreum.xyz/api/v1/x402/tools/x402-endpoint-check",
+     "method": "POST",
+     "live": [
+      "0x805b06f04d87a13791e83ecc251b5aeadc920b34"
+     ],
+     "listed": [
+      "0xd17763658955116881b93cec9ecba0fb168d2a3c"
+     ]
+    }
+   ]
+  },
+  {
+   "host": "web.tollkit.dev",
+   "stale_rows": [
+    {
+     "resource": "https://web.tollkit.dev/web/pages",
+     "method": "GET",
+     "live": [
+      "0x6b11c413f916ecfa846302ff05c171c3b497924e"
+     ],
+     "listed": [
+      "0xbbfce2d320de6ab328ba93a771c531ebfc9ce704"
+     ]
+    },
+    {
+     "resource": "https://web.tollkit.dev/web/brief",
+     "method": "GET",
+     "live": [
+      "0x6b11c413f916ecfa846302ff05c171c3b497924e"
+     ],
+     "listed": [
+      "0xbbfce2d320de6ab328ba93a771c531ebfc9ce704"
+     ]
+    },
+    {
+     "resource": "https://web.tollkit.dev/screenshot",
+     "method": "GET",
+     "live": [
+      "0x6b11c413f916ecfa846302ff05c171c3b497924e"
+     ],
+     "listed": [
+      "0xbbfce2d320de6ab328ba93a771c531ebfc9ce704"
+     ]
+    }
+   ]
+  },
+  {
+   "host": "api.truthbear.co",
+   "stale_rows": [
+    {
+     "resource": "https://api.truthbear.co/resolve",
+     "method": "GET",
+     "live": [
+      "0x2d16a243ba9facc6ac85519d5efad2149dc4c6c3"
+     ],
+     "listed": [
+      "0x2aa200640d0c77d549c0d09fcee661d4dc6d4513"
+     ]
+    },
+    {
+     "resource": "https://api.truthbear.co/gauge/japan-region",
+     "method": "GET",
+     "live": [
+      "0x2d16a243ba9facc6ac85519d5efad2149dc4c6c3"
+     ],
+     "listed": [
+      "0x2aa200640d0c77d549c0d09fcee661d4dc6d4513"
+     ]
+    }
+   ]
+  },
+  {
+   "host": "cultmath.com",
+   "stale_rows": [
+    {
+     "resource": "https://cultmath.com/run/peer-benchmark",
+     "method": "GET",
+     "live": [
+      "0x11fc98f5b6fce9d3257c93a6e70a58aeba067a47"
+     ],
+     "listed": [
+      "0x628dfeaa878ec0aeacc7b1a60c8627f58ce55ea3"
+     ]
+    },
+    {
+     "resource": "https://cultmath.com/run/claim-check",
+     "method": "GET",
+     "live": [
+      "0x11fc98f5b6fce9d3257c93a6e70a58aeba067a47"
+     ],
+     "listed": [
+      "0x628dfeaa878ec0aeacc7b1a60c8627f58ce55ea3"
+     ]
+    }
+   ]
+  },
+  {
+   "host": "pool.linkrra.com",
+   "stale_rows": [
+    {
+     "resource": "https://pool.linkrra.com/api/billing/x402/models/qwen3-vl-30b-a3b-instruct/chat/completions",
+     "method": "GET",
+     "live": [
+      "0x1f291b5b41b6e5ffbdc4f2ad8b5f45811438184a"
+     ],
+     "listed": [
+      "0xaa0a350f6080940c138a8a50c0fa8c8387782eb4"
+     ]
+    }
+   ]
+  },
+  {
+   "host": "tenjin.sh",
+   "stale_rows": [
+    {
+     "resource": "https://tenjin.sh/api/read/:handle/:slug",
+     "method": "GET",
+     "live": [
+      "0x578c640e2d53023066026381b8cc362539741063"
+     ],
+     "listed": [
+      "0x060024bdc3938c5d6b078d50d8e02ba673ffa249"
+     ]
+    }
+   ]
+  },
+  {
+   "host": "extract.tollkit.dev",
+   "stale_rows": [
+    {
+     "resource": "https://extract.tollkit.dev/extract/batch",
+     "method": "GET",
+     "live": [
+      "0x6b11c413f916ecfa846302ff05c171c3b497924e"
+     ],
+     "listed": [
+      "0xbbfce2d320de6ab328ba93a771c531ebfc9ce704"
+     ]
+    }
+   ]
+  },
+  {
+   "host": "sanctions-screen.agent-data-apis.workers.dev",
+   "stale_rows": [
+    {
+     "resource": "https://sanctions-screen.agent-data-apis.workers.dev/v1/screen/batch",
+     "method": "POST",
+     "live": [
+      "0x50d1abe80890d490c4218566bac60808ce469378"
+     ],
+     "listed": [
+      "0x689ff70f94d55eb68821c7ec49529c414a73ffdf"
+     ]
+    }
+   ]
+  },
+  {
+   "host": "402scrape.vercel.app",
+   "stale_rows": [
+    {
+     "resource": "https://402scrape.vercel.app/api/v1/extract",
+     "method": "GET",
+     "live": [
+      "0x7344ca750bad4de50f97787afbae6df63cc493ab"
+     ],
+     "listed": [
+      "0x6fdecdeb9cf04bbc30b2aac3e825620f5369b30e"
+     ]
+    }
+   ]
+  }
+ ]
+}
